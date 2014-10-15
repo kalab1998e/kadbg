@@ -1,4 +1,4 @@
-kalas KA - (basic) Linear Algebra Subroutines
+kadbg KA - (casual) debugging tool
 =====
 
 This is a casual debugging tool.
