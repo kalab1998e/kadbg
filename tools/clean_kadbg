@@ -1,8 +1,10 @@
 #!/bin/bash
 
+tmpfile=/tmp/$0-$$
+
 for i in `find . -name "*.cpp" -o -name "*.c" -o -name "*.h" -o -name "*.hpp" -o -name "*.txt"`; do
-  grep -v "kadbg.h" $i | grep -v "dbgMsg" >a.txt;
-  mv a.txt $i;
+  grep -v "kadbg.h" $i | grep -v "dbgMsg" >$tmpfile;
+  mv $tmpfile $i;
 done
 
 find . -name "kadbg.*" | xargs rm
